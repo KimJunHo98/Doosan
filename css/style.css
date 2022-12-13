@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* 가운데 영역 */
+.container { max-width: 1400px; width: 100%; margin: 0 auto; } 
+
+/* layout */
+#content {  } 
+#media_center {  } 
+#find {  } 
+#footer {  } 
+
+/* header */
+#header { 
+    width: 100%; height: 90px; position: relative; font-size: 1.3rem; background-color: #fff; 
+} 
+.header .logo { width: 10%; height: 100%; } /* w140px h90px */
+.header .logo a { width: 100%; height: 100%; display: block; }
+.header .logo a img { display: block; width: 80%; margin: 0 auto; padding-top: 17px; }
+.header ul.nav { width: 50%; display: flex; margin: 0 10%; }
+.header ul.nav li { width: 20%; text-align: center; line-height: 90px; }
+.header ul.nav li a {
+    width: 100%; height: 100%; display: block; color: #000; font-weight: 700; position: relative; 
+}
+.header ul.nav li a::before { 
+    content: ""; width: 0; height: 2px; display: block; position: absolute; bottom: 0; left: 0; background-color: #1634db; transition: all .6s ease-in-out;
+}
+.header ul.nav li a:hover::before { width: 100%; }
+.header ul.gnb { width: 20%; display: flex; }
+.header ul.gnb li { width: 100%; font-size: 1.4rem; line-height: 90px; text-align: center; }
+.header ul.gnb li.lang a { background: url("../img/ico_lang.png") no-repeat left 50%/ 30%; }
+.header ul.gnb li a { width: 100%; height: 100%; display: block; color: #000; }
+.header ul.gnb li a img { width: 40px; vertical-align: middle; }
+
+/* banner */
+#banner { width: 100%; height: 800px; position: relative; overflow: hidden; } 
+.banner ul.slide_banner { position: relative; width: 100%; height: 800px; }
+.banner ul.slide_banner li { position: absolute; width: 100%; height: 100%; overflow: hidden; }
+.banner ul.slide_banner li a { width: 100%; height: 100%; display: block; position: relative; }
+.banner ul.slide_banner img { height: 100%; position: absolute; }
+.banner ul.slide_banner li a h2 { width: 480px; position: absolute; color: #fff; font-size: 6rem; line-height: 1; top: 15%; left: 10%; word-break: keep-all; }
+.banner ul.slide_banner li a p { width: 400px; position: absolute; bottom: 0; right: 10%; color: #fff; font-size: 2.4rem; }
+
