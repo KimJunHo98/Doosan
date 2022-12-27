@@ -32,5 +32,39 @@ $(function(){
         e.preventDefault();
         $("#header .mo_menu").slideToggle(300);
     });
-    
+
+    // 슬라이드 배너
+    /* 
+        mainCarousel
+        시간마다 시키는 timer
+        애니메이션 효과를 갖고있는 slide
+    */
+    var i = 0,
+        k = null, repeat;
+
+    timer();
+    function timer(){
+        window.setInterval(function(){
+            i++;
+            k = i-1;
+            if(i==3){
+                i = 0;
+            };
+
+            slide();
+        }, 3000);
+    };
+
+    function slide(){
+        $(".white_box").css("left", "-100%").stop().animate({left:0}, 500, function(){
+            $(".white_box").stop().animate({left:"100%"}, 500);
+        });
+        $("#main_slide > .slide_cover ul li").eq(i).addClass("on");
+        $("#main_slide > .slide_cover ul li").eq(k).removeClass("on");
+        $("#main_slide > .slide_cover ul li").eq(i).find("img").addClass("on");
+        $("#main_slide > .slide_cover ul li").eq(i).find(".img_logo").addClass("on");
+        $("#main_slide > .slide_cover ul li").eq(i).find(".img_text").addClass("on");
+        $("#main_slide > .slide_cover ul li").eq(i).find(".box").addClass("on");
+        $("#main_slide > .slide_cover ul li a img").removeClass("on");
+    };
 });

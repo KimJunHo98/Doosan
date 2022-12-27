@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{width:100px; height:100px; position:absolute; background:pink;}
+        .cir{width:100px; height:100px; position:absolute; background: #fc0; border-radius: 50%;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="cir"></div>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // $(function(){
+        //     // $("css선택자").animate(속성, [시간], [가속도], [콜백함수])
+
+        //     $('.box').animate({top: 200,left: 500},1000).delay(500).animate({top:0,left:0});
+        //     $(".cir").animate({top:400, left:300}, 1000).delay(500).animate({top:400, left:100}, 1000);
+        // });
+
+        window.setInterval(function(){
+            $('.box').animate({top:200, left:500}, 100).delay(500).animate({top:0, left:0});
+            $(".cir").animate({top:400, left:300}, 100).delay(500).animate({top:0, left:0, width:200, height:200}, 100).animate({top:400, left:0, width:100, height:100}, 500);
+        }, 500);
+    </script>
+</body>
+</html>
